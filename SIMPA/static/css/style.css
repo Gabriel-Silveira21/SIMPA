@@ -1,0 +1,111 @@
+/* ==================================================
+   SIMPA - Estilos iniciais
+   Responsável principal: equipe de CSS
+   ================================================== */
+
+:root {
+    --background: #f4f6f8;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #d1d5db;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.container {
+    width: min(100% - 32px, 900px);
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.header {
+    margin-bottom: 28px;
+}
+
+.tag {
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+.subtitle {
+    color: var(--muted);
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font: inherit;
+}
+
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.button {
+    border: 0;
+    border-radius: 10px;
+    padding: 13px 18px;
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--primary-hover);
+}
+
+.answer {
+    margin-top: 28px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f9fafb;
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: min(100% - 20px, 900px);
+        padding: 20px 0;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
